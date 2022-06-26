@@ -4,6 +4,7 @@
 name: github activity
 
 on:
+  schedule: [{cron: "0 */1 * * *"}]
   push:
     branches: [ master ]
     
