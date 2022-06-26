@@ -19,7 +19,7 @@ jobs:
     - name: Setup Python
       uses: actions/setup-python@v1
 
-    - name: Install sphinx
+    - name: Install github-activity
       run: pip3 install github-activity
       
     - name: Build page 
