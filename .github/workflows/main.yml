@@ -22,7 +22,7 @@ jobs:
       run: pip3 install github-activity
       
     - name: Build page 
-      run: github-activity fortran-lang/fortran-lang.org --since 01/01/2022  -o sample.md --auth ${{ secrets.ACCESS_TOKEN }}
+      run: github-activity fortran-lang/fortran-lang.org --since 01/01/2020  -o sample.md --auth ${{ secrets.ACCESS_TOKEN }}
       
     - name: output page 
       run: cat sample.md 
