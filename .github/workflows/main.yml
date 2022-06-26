@@ -1,0 +1,39 @@
+# Github action to build github activity
+#
+
+name: github activity
+
+on:
+  push:
+    branches: [ master ]
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: checkout source
+      uses: actions/checkout@v2
+   
+    - name: Setup Python
+      uses: actions/setup-python@v1
+
+    - name: Install sphinx
+      run: pip3 install github-activity
+      
+    - name: Build page 
+      run: github-activity fortran-lang/fortran-lang.org --since 01/01/2022  -o sample.md --auth ${{ secrets.ACCESS_TOKEN }}
+      
+    - name: output page 
+      run: cat sample.md 
+    
+    - name: Commit files # transfer the new html files back into the repository
+      run: |
+        git config --local user.name "henilp105"
+        git add sample.md
+        git commit -m "sample.md"
+    - name: Push changes # push the output folder to your repo
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.METRICS_TOKEN }}
+        force: true
