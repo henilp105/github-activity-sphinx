@@ -23,18 +23,14 @@ jobs:
       
     - name: Build page 
       run: python graph.py
-      
-    - name: output page 
-      run: cat fortran.json 
     
     - name: Commit files # transfer the new html files back into the repository
       run: |
-        git config --local user.name "henilp105"
-        git add fortran.json 
+        git config --local user.name "henilp105" 
         git add fortran-lang.org.json
         git add fpm.json
         git add stdlib.json
-        git commit -m "fortran.json"
+        git commit -m "graphs"
     - name: Push changes # push the output folder to your repo
       uses: ad-m/github-push-action@master
       with:
