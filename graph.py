@@ -179,5 +179,5 @@ def plot_graphs(graph):
 graphs =["fortran-lang.org","fpm","stdlib"]
 for i in graphs:
   plot_graphs(i)
-with open("_data/fortran.json", "w") as f:
+with open("fortran.json", "w") as f:
     json.dump(fortran_tags, f)
