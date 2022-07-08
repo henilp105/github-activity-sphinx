@@ -21,8 +21,11 @@ jobs:
     - name: Install github-activity
       run: pip3 install --user -r requirements.txt
       
-    - name: Build page 
+    - name: graph 
       run: python graph.py
+      
+    - name: fortran 
+      run: python fortran.py
     
     - name: Commit files # transfer the new html files back into the repository
       run: |
@@ -30,7 +33,8 @@ jobs:
         git add fortran-lang.org.json
         git add fpm.json
         git add stdlib.json
-        git commit -m "graphs"
+        git add fortran.json
+        git commit -m "graphs and fortran"
     - name: Push changes # push the output folder to your repo
       uses: ad-m/github-push-action@master
       with:
