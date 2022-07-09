@@ -22,6 +22,9 @@ jobs:
       run: pip3 install --user -r requirements.txt
       
     - name: graph 
+      run: mkdir source && cd source && mkdir charts 
+      
+    - name: graph 
       run: python monthly.py
       
     - name: fortran 
