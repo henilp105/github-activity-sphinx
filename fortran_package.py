@@ -137,3 +137,5 @@ conf['reference_links'] = conf['reference-links']
 
 with open("fortran_package.json", "w") as f:
     json.dump(fortran_tags, f)
+with open("fortran_learn.json", "w") as f:
+    json.dump(conf, f)
