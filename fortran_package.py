@@ -135,5 +135,5 @@ conf['reference_books'] = conf['reference-books']
 conf['reference_courses'] = conf['reference-courses']
 conf['reference_links'] = conf['reference-links']
 
-with open("fortran.json", "w") as f:
+with open("fortran_package.json", "w") as f:
     json.dump(fortran_tags, f)
