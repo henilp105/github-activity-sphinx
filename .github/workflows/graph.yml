@@ -28,7 +28,7 @@ jobs:
       run: python monthly.py
       
     - name: fortran 
-      run: python fortran.py
+      run: python fortran_package.py
     
     - name: Commit files # transfer the new html files back into the repository
       run: |
