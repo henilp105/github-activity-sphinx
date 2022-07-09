@@ -22,7 +22,7 @@ jobs:
       run: pip3 install --user -r requirements.txt
       
     - name: graph 
-      run: python graph.py
+      run: python monthly.py
       
     - name: fortran 
       run: python fortran.py
