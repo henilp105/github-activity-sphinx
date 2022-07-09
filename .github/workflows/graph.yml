@@ -35,6 +35,7 @@ jobs:
         git config --local user.name "henilp105" 
         git add fortran-lang.org.json
         git add fpm.json
+        git add source
         git add stdlib.json
         git add fortran.json
         git commit -m "graphs and fortran"
