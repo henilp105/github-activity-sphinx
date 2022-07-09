@@ -57,7 +57,7 @@ def monthly_graph(repo):
     stdlib_monthly = monthly_commits
     stdlib_commits = commits
     print(stdlib_monthly , stdlib_commits)
-  with open(repo+".json", "w") as f:
+  with open("source/charts/"+repo+".json", "w") as f:
     json.dump(test_chart, f)
 
  
