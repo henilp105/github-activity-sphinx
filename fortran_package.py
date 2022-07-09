@@ -5,10 +5,10 @@ import json
 import requests
 import datetime
 #print("learn section")
-info = requests.get('https://raw.githubusercontent.com/henilp105/fortran-lang.org/master/_data/package_index.yml').text
+info = requests.get('https://raw.githubusercontent.com/fortran-lang/fortran-lang.org/master/_data/package_index.yml').text
 fortran_index = yaml.safe_load(info)
 #print(conf['books'])
-info = requests.get('https://raw.githubusercontent.com/henilp105/fortran-lang.org/master/_data/learning.yml').text
+info = requests.get('https://raw.githubusercontent.com/fortran-lang/fortran-lang.org/master/_data/learning.yml').text
 conf = yaml.safe_load(info)
 
 fortran_index_tags = []
