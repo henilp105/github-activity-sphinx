@@ -25,7 +25,7 @@ jobs:
       run: mkdir source && cd source && mkdir charts 
       
     - name: graph 
-      run: python monthly.py
+      run: python api.py
       
     - name: fortran 
       run: python fortran_package.py
