@@ -25,7 +25,7 @@ jobs:
       run: python api.py
       
     - name: fortran 
-      run: python fortran_package.py
+      run: python fortran_package.py ${{ secrets.API_TOKEN }}
     
     - name: Commit files # transfer the new html files back into the repository
       run: |
