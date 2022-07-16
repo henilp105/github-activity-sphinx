@@ -19,7 +19,7 @@ fortran_index = yaml.safe_load(info)
 info = requests.get('https://raw.githubusercontent.com/fortran-lang/fortran-lang.org/master/_data/learning.yml').text
 conf = yaml.safe_load(info)
 headers = CaseInsensitiveDict()
-headers["Authorization"] = "Basic aGVuaWxwMTA1OmdocF9TQTZxaHFBYmZVVGNkaEZHc0tnbnllN25vcndUSzk0T0dTVGg="
+headers["Authorization"] = str(sys.argv[1]) +" " +str(sys.argv[2])
 #this auth token is only meant for fortran github api use. please DONT misuse it.
 
 fortran_index_tags = []
@@ -203,6 +203,7 @@ contributor_repo={
 }
 def contributors(repo):
   info = requests.get('https://api.github.com/repos/'+repo+'/contributors', headers=headers).text
+  print(info.status_code)
   d = json.loads(info)
   for i in d:
     contributor.append(i['login'])
