@@ -4,6 +4,7 @@
 name: github activity
 
 on:
+  workflow_dispatch:
   push:
     branches: [ master ]
     
