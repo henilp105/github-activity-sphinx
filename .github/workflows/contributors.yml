@@ -19,6 +19,6 @@ jobs:
         ACCESS_TOKEN:  ${{ secrets.METRICS_TOKEN }}
         IMG_WIDTH: '100'
         FONT_SIZE: '14'
-        PATH: '/README.md'
+        PATH: '/news/*.md'
         COMMIT_MESSAGE: 'docs(README): update contributors'
         AVATAR_SHAPE: 'round'
