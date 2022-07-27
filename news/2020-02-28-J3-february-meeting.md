@@ -7,7 +7,7 @@ author: Ondřej Čertík and Zach Jibben
 
 The J3 Fortran Committee meeting took place in Las Vegas, NV, on February 24-28,
 2020.
-
+### Contributors
 # Attendance
 
 The following people / companies attended:
