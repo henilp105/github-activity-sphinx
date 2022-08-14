@@ -13,5 +13,30 @@
         "name": "fr",
         "version": "fr",
         "url": "../fr/"
+    },
+    {
+        "name": "es",
+        "version": "es",
+        "url": "../es/"
+    },
+    {
+        "name": "ja",
+        "version": "ja",
+        "url": "../ja/"
+    },
+    {
+        "name": "nl",
+        "version": "nl",
+        "url": "../nl/"
+    },
+    {
+        "name": "pt",
+        "version": "pt",
+        "url": "../pt/"
+    },
+    {
+        "name": "zh_CN",
+        "version": "zh_CN",
+        "url": "../zh_CN/"
     }
 ]
