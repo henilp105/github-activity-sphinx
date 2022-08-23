@@ -1,8 +1,8 @@
 name: Add contributors
 on:
-  pull_request:
-    types:
-      - closed
+  workflow_dispatch:
+  schedule:
+    - cron:  '20 20 * * *'
 # push:
 #   branches:
 #     - master
@@ -10,13 +10,8 @@ on:
 jobs:
   add-contributors:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true
     steps:
     - uses: actions/checkout@v2
-    - name: PR Cleanup
-      run: |
-        echo pr/${{github.event.number}}
-          
     - uses: BobAnkh/add-contributors@master
       with:
         CONTRIBUTOR: '### Contributors'
@@ -24,6 +19,6 @@ jobs:
         ACCESS_TOKEN:  ${{ secrets.METRICS_TOKEN }}
         IMG_WIDTH: '100'
         FONT_SIZE: '14'
-        PATH: '/README.md'
+        PATH: '/news/2020-02-28-J3-february-meeting.md'
         COMMIT_MESSAGE: 'docs(README): update contributors'
         AVATAR_SHAPE: 'round'
