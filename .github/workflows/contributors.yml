@@ -1,8 +1,8 @@
 name: Add contributors
 on:
-  workflow_dispatch:
-  schedule:
-    - cron:  '20 20 * * *'
+  pull_request:
+    types:
+      - closed
 # push:
 #   branches:
 #     - master
@@ -10,6 +10,7 @@ on:
 jobs:
   add-contributors:
     runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
     steps:
     - uses: actions/checkout@v2
     - uses: BobAnkh/add-contributors@master
@@ -19,6 +20,6 @@ jobs:
         ACCESS_TOKEN:  ${{ secrets.METRICS_TOKEN }}
         IMG_WIDTH: '100'
         FONT_SIZE: '14'
-        PATH: '/news/2020-02-28-J3-february-meeting.md'
+        PATH: '/README.md'
         COMMIT_MESSAGE: 'docs(README): update contributors'
         AVATAR_SHAPE: 'round'
