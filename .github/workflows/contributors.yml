@@ -15,7 +15,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: PR Cleanup
       run: |
-        echo pr/${{github.event.issue.number}}
+        echo pr/${{github.event.number}}
           
     - uses: BobAnkh/add-contributors@master
       with:
