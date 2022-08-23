@@ -13,6 +13,10 @@ jobs:
     if: github.event.pull_request.merged == true
     steps:
     - uses: actions/checkout@v2
+    - name: PR Cleanup
+      run: |
+        echo pr/${{github.event.issue.number}}
+          
     - uses: BobAnkh/add-contributors@master
       with:
         CONTRIBUTOR: '### Contributors'
