@@ -19,30 +19,23 @@ jobs:
     - name: Setup Python
       uses: actions/setup-python@v1
 
-    # - name: Install github-activity
-    #   run: pip3 install --user -r requirements.txt
+    - name: Install github-activity
+      run: pip3 install --user -r requirements.txt
       
-    # - name: fortran 
-    #   run: python fortran_package.py ${{ secrets.API_TOKEN }}
+    - name: fortran 
+      run: python fortran_package.py ${{ secrets.API_TOKEN }}
     
-    # - name: Commit files # transfer the new html files back into the repository
-    #   run: |
-    #     git config --local user.name "henilp105" 
-    #     git add fortran-lang.org.json
-    #     git add fpm.json
-    #     git add source
-    #     git add stdlib.json
-    #     git add fortran.json
-    #     git commit -m "graphs and fortran"
-    # - name: Push changes # push the output folder to your repo
-    #   uses: ad-m/github-push-action@master
-    #   with:
-    #     github_token: ${{ secrets.METRICS_TOKEN }}
-    #     force: true
-    - uses: ramonsnir/gh-action-pr-details@1.0.3
-      id: vars
+    - name: Commit files # transfer the new html files back into the repository
+      run: |
+        git config --local user.name "henilp105" 
+        git add fortran-lang.org.json
+        git add fpm.json
+        git add source
+        git add stdlib.json
+        git add fortran.json
+        git commit -m "graphs and fortran"
+    - name: Push changes # push the output folder to your repo
+      uses: ad-m/github-push-action@master
       with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
-    - run: echo ${{ steps.vars.outputs.pr_title }}
-    - run: echo ${{ steps.vars.outputs.pr_url }}
-    - run: echo ${{ steps.vars.outputs }}
+        github_token: ${{ secrets.METRICS_TOKEN }}
+        force: true
